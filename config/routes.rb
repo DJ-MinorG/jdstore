@@ -14,8 +14,15 @@ Rails.application.routes.draw do
     resources :user_mg do
       member do
         post :change_admin
-
       end
     end
   end
+
+  resources :products do
+    member do
+      post :add_to_cart
+    end
+  end
+
+
 end
