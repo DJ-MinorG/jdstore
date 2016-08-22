@@ -1,0 +1,7 @@
+<tr>
+  <td width="80%">
+    <%= link_to(render_highlight_content(product,@query_string),products_path(product)) %> -
+    <%= product.title %>
+  </td>
+  <td> <%= product.created_at.to_s(:short) %> </td>
+</tr>

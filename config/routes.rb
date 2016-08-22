@@ -8,7 +8,9 @@ Rails.application.routes.draw do
   end
   root "products#index"
 
-  resources :products
+  
+
+
 
   namespace :admin do
     resources :user_mg do
@@ -22,6 +24,10 @@ Rails.application.routes.draw do
   resources :products do
     member do
       post :add_to_cart
+    end
+
+    collection do
+      get :search
     end
   end
 
