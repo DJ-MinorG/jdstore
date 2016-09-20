@@ -1,7 +1,7 @@
 <div class="row" style="margin:20px">
-  <div class="col-md-12 showproduct-bg showproduct-font">
+  <div class="col-md-10 col-md-offset-1 showproduct-bg showproduct-font">
     <h2>My cart</h2>
-    <table class="table table-bordered ">
+    <table class="table table-bordered">
       <thead>
         <tr>
           <th colspan="2">
@@ -19,7 +19,7 @@
       <tbody class="">
         <% current_cart.cart_items.each do |cart_item| %>
         <tr>
-          <td>
+          <td style="width:100px;">
             <%= link_to product_path(cart_item.product) do %>
               <% if cart_item.product.image.present? %>
                 <%= image_tag(cart_item.product.image.thumb.url, class:"thumbnail showproduct-bg") %>

@@ -1,10 +1,8 @@
-<li>
-  <%= form_tag search_products_path, method: :get do %>
-  <input type="text" class="form-control" name="query_string" value="<%= params[:query_string] %>" placeholder="yellow stone...">
-       <span class="input-group-btn">
-         <button type="submit" class="btn btn-danger">
-           <span class="glyphicon glyphicon-search"></span>
-         </button>
-       </span>
-  <% end %>
-</li>
+<%= form_tag search_products_path, method: :get do %>
+  <div class="input-group">
+    <input type="text" class="form-control" name="query_string" value="<%= params[:query_string] %>" placeholder="yellow tail...">
+    <div class="input-group-btn">
+        <button class="btn btn-default" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+    </div>
+  </div>
+<% end %>

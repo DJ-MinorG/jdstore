@@ -1,5 +1,5 @@
 <div class="col-md-12">
-  <%= link_to("Add a product",new_admin_product_path,class:"btn btn-primary", style:"margin-bottom:10px; background-color:#ea010f") %>
+  <%= link_to("Add a product",new_admin_product_path,class:"btn btn-danger", style:"margin-bottom:10px; background-color:#ea010f") %>
 </div>
 
 
@@ -8,11 +8,11 @@
 
   <div class="col-sm-2 col-md-2">
     <div class="thumbnail showproduct-bg">
-      <!-- <% if product.image.present? %>
-          <%= link_to(image_tag(product.image.thumb.url),admin_product_path(product)) %>
+      <% if product.image.present? %>
+        <%= link_to(image_tag(product.image.thumb.url),product_path(product)) %>
       <% else %>
         <%= image_tag("http://placehold.it/200x200&text=NoPic") %>
-      <% end %> -->
+      <% end %>
 
       <div class="caption showproduct-font">
         <h5><%= link_to(product.title,admin_product_path(product)) %></h5>

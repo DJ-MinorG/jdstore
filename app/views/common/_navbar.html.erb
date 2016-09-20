@@ -7,16 +7,17 @@
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right" style:"color: #f8f8f8;">
-                <%= render "common/search_bar" %>
-                <li>
-                  <%= link_to carts_path do %>
-                   购物车<i class="fa fa-shopping-cart"></i> (<%= current_cart.cart_products.count %>)
-                  <% end %>
-                </li>
-                <%= render "common/navbar_user" %>
-
-            </ul>
+          <ul class="nav navbar-nav navbar-right" style:"color: #f8f8f8;">
+              <li>
+                <%= link_to carts_path do %>
+                 Cart <i class="fa fa-shopping-cart"></i> (<%= current_cart.cart_products.count %>)
+                <% end %>
+              </li>
+              <%= render "common/navbar_user" %>
+          </ul>
+          <div class="col-md-2 pull-right search-bar-block">
+            <%= render "common/search_bar" %>
+          </div>
         </div>
         <!-- /.navbar-collapse -->
     </div>
